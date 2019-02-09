@@ -6,7 +6,7 @@ import tempfile
 import os
 import argparse
 
-
+__all__ = ["main"]
 HEADER = ("Date", "Date valeur", "Libellé", "Débit Euros", "Crédit Euros")
 
 
@@ -33,7 +33,7 @@ def prepare_csv(path):
         return inf.read().decode("cp1252").replace(";\r\n", ";&&&&").replace("\r\n", "").replace(";&&&&",";\r\n")
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='Process CSV to importable CSV to dolibear')
     parser.add_argument('path', type=str)
     arg_path = parser.parse_args()
@@ -43,6 +43,7 @@ if __name__ == '__main__':
     f_temp.write(data)
     f_temp.seek(0)
     c = csv.DictReader(f_temp, fieldnames=HEADER, dialect=InpDial)
+    data_list = []
     for row in c:
         data_list.append(row)
     f_temp.close()
@@ -52,3 +53,6 @@ if __name__ == '__main__':
         for row in data_list:
             row.pop(None, None)
             c.writerow(row)
+
+if __name__ == '__main__':
+    main()
