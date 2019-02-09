@@ -8,7 +8,6 @@ import argparse
 
 
 HEADER = ("Date", "Date valeur", "Libellé", "Débit Euros", "Crédit Euros")
-data_list = []
 
 
 class InpDial(csv.Dialect):
@@ -47,9 +46,9 @@ if __name__ == '__main__':
     for row in c:
         data_list.append(row)
     f_temp.close()
-    
+
     with open("prepared_csv.csv", "w") as outf:
         c = csv.DictWriter(outf, fieldnames=HEADER, dialect=OutDial)
         for row in data_list:
-            row.pop(None, None) 
+            row.pop(None, None)
             c.writerow(row)
