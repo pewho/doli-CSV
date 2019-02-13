@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import os
 import argparse
 import tempfile
 import csv
-
-__all__ = ["main"]
 
 HEADER = ("Date", "Date valeur", "Libellé", "Débit Euros", "Crédit Euros")
 
