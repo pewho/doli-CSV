@@ -7,7 +7,6 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/pewho/doli-CSV"
 
-
 [tool.poetry.scripts]
 csvdoli="csv_doli.core:main"
 
@@ -15,6 +14,9 @@ csvdoli="csv_doli.core:main"
 python = "^3.5"
 
 [tool.poetry.dev-dependencies]
+pytest = "^4.2"
+tox = "^3.7"
+tox-pyenv = "^1.1"
 
 
 [build-system]
