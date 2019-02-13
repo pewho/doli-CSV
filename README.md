@@ -18,16 +18,16 @@ Il n'y a pas d'autres dependances.
 
 - Lancer le script d'installation
 ```
->>> python setup.py
+>>> pip install dist/csv_doli-0.1.2-py3-none-any.whl
 ```
 
 
 Utilisation
 -----------
 
-- Lancer la commande `csv-doli`, avec en parametre le chemin vers le CSV source
+- Lancer la commande `csvdoli`, avec en parametre le chemin vers le CSV source
 ```
->>> csv-doli <path>
+>>> csvdoli <path>
 ```
 
 Le fichier est créé dans le dossier courant, avec pour nom `prepared_csv.csv`
