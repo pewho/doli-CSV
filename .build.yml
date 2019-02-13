@@ -1,0 +1,14 @@
+image: alpine/latest
+sources:
+  - https://git.sr.ht/~pehwo/doli_csv
+packages:
+  - python3
+  - curl
+  - poetry
+tasks:
+  - setup: |
+      cd doli_csv
+      poetry install
+  - test: |
+      cd doli_csv
+      poetry run pytest
