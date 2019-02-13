@@ -30,6 +30,9 @@ Utilisation
 >>> csvdoli <path>
 ```
 
+- Via le fichier `dolicsv.bat`, en drag&drop avec le fichier CSV source
+
+
 Le fichier est créé dans le dossier courant, avec pour nom `prepared_csv.csv`
 
 
