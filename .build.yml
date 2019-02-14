@@ -7,9 +7,6 @@ packages:
 tasks:
   - pip: |
       sudo pip install poetry
-  - setup: |
-      cd doli_csv
-      poetry install
   - test_py37: |
       cd doli_csv
       poetry run tox
