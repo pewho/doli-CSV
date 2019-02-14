@@ -2,16 +2,20 @@ image: archlinux
 sources:
   - https://git.sr.ht/~pehwo/doli_csv
 packages:
-  - python34
-  - python35
-  - python36
+  - openssl
   - python
+  - python-pip
+  - pyenv
 tasks:
+  - pyenv: |
+       pyenv install 3.5.5
+       pyenv install 3.6.6
+       pyenv install 3.7.0
   - pip: |
-      sudo pip3 install --upgrade pip
-      sudo pip3 install poetry
+      pip install --user poetry
   - setup: |
       cd doli_csv
+      pyenv local 3.5.5 3.6.6 3.7.0
       poetry install
   - test: |
       cd doli_csv
