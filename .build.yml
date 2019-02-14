@@ -1,14 +1,18 @@
-image: alpine/latest
+image: archlinux
 sources:
   - https://git.sr.ht/~pehwo/doli_csv
 packages:
-  - python3
-  - curl
-  - poetry
+  - python34
+  - python35
+  - python36
+  - python
 tasks:
+  - pip: |
+      sudo pip3 install --upgrade pip
+      sudo pip3 install poetry
   - setup: |
       cd doli_csv
       poetry install
   - test: |
       cd doli_csv
-      poetry run pytest
+      poetry run tox
