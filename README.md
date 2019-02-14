@@ -16,13 +16,13 @@ Il n'y a pas d'autres dependances.
 - Se placer dans le dossier `csv-dolibear`. Si le script est téléchargé depuis github en zip, le deziper avant.
 
 ```
-=> cd csv-dolibear
+> cd csv-dolibear
 ```
 
 - Lancer le script d'installation
 
 ```
-=> pip install dist/csv_doli-0.1.2-py3-none-any.whl
+> pip install dist/csv_doli-0.1.2-py3-none-any.whl
 ```
 
 
@@ -30,8 +30,9 @@ Utilisation
 -----------
 
 - Lancer la commande `csvdoli`, avec en parametre le chemin vers le CSV source
+
 ```
-=> csvdoli <path>
+> csvdoli <path>
 ```
 
 - Via le fichier `dolicsv.bat`, en drag&drop avec le fichier CSV source
